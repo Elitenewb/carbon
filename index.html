@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Cycle Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header id="header">
+            <h1>Carbon Cycle Explorer</h1>
+            <button id="sound-toggle" class="icon-button" title="Toggle Sound">
+                🔊
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Title Screen -->
+            <section id="title-screen" class="screen active">
+                <div class="title-content">
+                    <div class="title-icon">🌍</div>
+                    <h2>Welcome to the Carbon Cycle!</h2>
+                    <p>Follow Carby the carbon atom on an amazing journey through our world.</p>
+                    <p>Learn how carbon moves through the air, plants, animals, and more!</p>
+                    <div class="button-group">
+                        <button id="start-story-btn" class="primary-button">
+                            Start Your Journey
+                        </button>
+                        <button id="sandbox-btn" class="secondary-button" disabled>
+                            🔒 Sandbox Mode
+                        </button>
+                    </div>
+                    <p id="sandbox-hint" class="hint">Complete the story to unlock Sandbox Mode!</p>
+                </div>
+            </section>
+
+            <!-- Story Screen -->
+            <section id="story-screen" class="screen">
+                <div id="story-content">
+                    <!-- Chapter content will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Sandbox Screen -->
+            <section id="sandbox-screen" class="screen">
+                <div id="sandbox-content">
+                    <!-- Sandbox content will be loaded here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer id="footer">
+            <button id="back-btn" class="nav-button" disabled>
+                ← Back
+            </button>
+            <div id="progress-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <span id="progress-text">Chapter 1 of 6</span>
+            </div>
+            <button id="next-btn" class="nav-button" disabled>
+                Next →
+            </button>
+        </footer>
+    </div>
+
+    <!-- Canvas for particle effects -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/story.js"></script>
+    <script src="js/sandbox.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
